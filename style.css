@@ -57,6 +57,7 @@ img {
 /* Why is display flex necessary? */
 .section-one {
   display: flex;
+  justify-content: flex-end;
 }
 
 .section-two {
