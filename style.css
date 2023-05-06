@@ -18,27 +18,21 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--clr-Very-dark-blue-main-background);
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 main {
-  width: 330px;
+  max-width: 1440px;
+  width: 80%;
   background: var(--clr-Dark-desaturated-blue-card-background);
-  border-radius: 10px;
+  border-radius: 0.5em;
 }
 
 @media (min-width:800px) {
   main {
-    width: 760px;
-    height: 330px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-  }
-
-  .section-one{
-    grid-column: 2 / 3;
   }
 
   .section-two {
@@ -47,74 +41,51 @@ main {
   }
 }
 
-.desktop-poto {
-  display: none;
-  border-radius: 10px 10px 0 0 ;
-}
-
-.mobail-poto {
-  width: 100%;
-  display: block;
-  border-radius: 10px 10px 0 0;
-}
-
-.background-clr {
-  width: 330px;
-  position: absolute;
-  height: 242px;
+.picture-container{
   background: var(--clr-Soft-violet-accent);
-  opacity: .5;
-  filter: brightness(50%) saturate(180%);
-  border-radius: 15px 15px 0 0;
+  border-radius: 0.5em 0.5em 0 0;
 }
 
-@media (min-width:800px) {
-  .mobail-poto {
-    display: none;
-  }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode:multiply;
+  opacity: 0.8;
+}
 
-  .desktop-poto {
-    display: block;
-    width: 330px;
-    height:329px;
-    border-radius: 0 10px 10px 0;
-  }
-
-  .background-clr {
-    height: 329px;
-    border-radius: 0 10px 10px 0;
-  }
+/* Why is display flex necessary? */
+.section-one {
+  display: flex;
 }
 
 .section-two {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: var(--White-main-heading-stats);
-  padding: 30px;
+  padding: 2em;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 2em;
   text-align: center;
 }
 
 .text h1 {
-  font-size: 26px;
-  line-height: 28px;
+  font-size: 2rem;
+  line-height: 2rem;
   font-family:"Inter";
   color: hsla(0, 0%, 100%, 0.75);
   text-shadow: 5px 5px 10px hsl(233, 47%, 7%);
 }
 
 .text p {
-  line-height: 24px;
+  line-height: 1.5rem;
   font-family:"Inter";
   font-family: 400;
-  font-size: 15px;
+  font-size: 1.15rem;
   color: hsla(0, 3%, 61%, 0.6);
   text-shadow: 5px  5px  10px  hsl(233, 47%, 7%);
 }
@@ -125,13 +96,17 @@ main {
   }
 
   .text p {
-    line-height: 20px;
-    font-size: 12px;
+    line-height: 2rem;
+    font-size: 1.18rem;
   }
 
-  .section-one {
-    display: flex;
-    justify-content: flex-end;
+  .text h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .picture-container{
+    border-radius: 0 0.5em 0.5em 0;
   }
 }
 
@@ -143,23 +118,23 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2em;
   font-family: "Lexend Deca";
-  padding-top: 30px;
+  padding-top: 2em;
 }
 
 .points p {
   font-family: "Inter";
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.15rem;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 1.5em;
   color: hsla(0, 3%, 61%, 0.6);
   text-shadow: 5px  5px  5px  hsl(233, 47%, 7%);
 }
 
 .points h2 {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   font-family: "Inter";
   color: hsla(0, 0%, 100%, 0.75);
@@ -171,7 +146,7 @@ main {
     width: 100%;
     flex-direction: row;
     text-align: start;
-    padding-top: 40px;
-    justify-content:space-between;
+    padding-top: 2.5em;
+    gap: 3em;
   }
 }

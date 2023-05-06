@@ -17,11 +17,10 @@
 <body>
   <main>
     <section class="section-one">
-        <div class="images">
-          <div class="background-clr"></div>
-          <img class="desktop-poto" src="images\image-header-desktop.jpg" alt="">
-          <img class="mobail-poto" src="images\image-header-mobile.jpg" alt="">
-        </div>
+        <picture class="picture-container">
+          <source media="(min-width:800px)" srcset="images\image-header-desktop.jpg" alt="">
+          <img src="images\image-header-mobile.jpg" alt="">
+        </picture>
     </section>
 
     <section class="section-two">
