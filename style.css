@@ -18,7 +18,8 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--clr-Very-dark-blue-main-background);
-  height: 150vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main {
